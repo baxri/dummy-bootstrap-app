@@ -1,0 +1,35 @@
+{
+  "name": "dummy-bootstrap-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baxri/dummy-bootstrap-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baxri/dummy-bootstrap-app/issues"
+  },
+  "homepage": "https://github.com/baxri/dummy-bootstrap-app#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "bootstrap": "^4.0.0",
+    "css-loader": "^0.28.10",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "popper": "^1.0.1",
+    "postcss-loader": "^2.1.1",
+    "precss": "^3.1.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-stream": "^4.0.2"
+  }
+}
