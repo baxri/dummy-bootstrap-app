@@ -2,41 +2,12 @@ let gulp = require('gulp');
 let sass = require('gulp-sass');
 let webpack = require('webpack-stream');
 
-gulp.task('sass', function(){
-    gulp.src('./css/custom.scss')
-    .pipe(webpack({
-        module: {
-            rules: [
-                {
-                    test: /\.scss$/,
-                    use: [{
-                        loader: "style-loader" // creates style nodes from JS strings
-                    }, {
-                        loader: "css-loader" // translates CSS into CommonJS
-                    },
-                    {
-                        loader: 'postcss-loader', // Run post css actions
-                        options: {
-                          plugins: function () { // post css plugins, can be exported to postcss.config.js
-                            return [
-                              require('precss'),
-                              require('autoprefixer')
-                            ];
-                          }
-                        }
-                      }, {
-                        loader: "sass-loader" // compiles Sass to CSS
-                    }]    
-                }
-            ]
-        },
-        output: {
-            filename: 'styles.js',
-        }
-    }))
+gulp.task('scss', function(){
+    gulp.src('./css/app.scss')
+    .pipe(sass())
     .pipe(gulp.dest('./public/css/'))
-    
 });
+
 
 gulp.task('js', function(){
     gulp.src('./js/bootstrap.js')
@@ -49,13 +20,17 @@ gulp.task('js', function(){
 });
 
 
-
-gulp.task('default', function(){
+gulp.task('watch', function(){
   gulp.watch([
+
+        './css/include/*.scss',
         './css/*.scss',
-        './js/*.js'
+
+        './js/*.js',
+        './js/include/*.js',
+        
   ], [
-      'sass', 'js'
+      'scss', 'js'
   ]);
 });
 
