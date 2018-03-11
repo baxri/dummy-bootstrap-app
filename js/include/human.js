@@ -3,6 +3,10 @@ export default class Human{
         this.name = name;
     }
 
+    setName(){
+        
+    }
+
     show(){
         console.log(this.name);
     }
