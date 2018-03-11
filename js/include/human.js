@@ -4,7 +4,6 @@ export default class Human{
     }
 
     changeName(name){
-        //
         this.name = name;
     }
 
