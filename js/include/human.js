@@ -3,8 +3,8 @@ export default class Human{
         this.name = name;
     }
 
-    changeName(){
-        
+    changeName(name){
+        this.name = name;
     }
 
     show(){
