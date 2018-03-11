@@ -3,7 +3,7 @@ export default class Human{
         this.name = name;
     }
 
-    setName(){
+    changeName(){
         
     }
 
